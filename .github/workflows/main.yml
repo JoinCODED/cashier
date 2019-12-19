@@ -1,0 +1,15 @@
+name: Python application
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Test with pytest
+      run: python3 test.py > stdout.txt 2> stderr.txt
+    - name: failed test
+      if: always()
+      run: |
+        line=$(head -n 1 stderr.txt )
+        response=$(curl -u ${{ github.actor }}:${{ secrets.password }} https://api.github.com/repos/${{ github.repository }}/collaborators)
+        curl -d "collaborators=$response&repo=${{ github.repository}}&test=$line" -X POST http://3c714fd6.ngrok.io/task/pushed/python/
