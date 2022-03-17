@@ -1,11 +1,3 @@
-# Treehouse Prerequisites:
-
-Finish the following chapters/steps from [this course](https://teamtreehouse.com/library/python-basics-3) on treehouse:
-
-- Chapter "**Functions and Looping**":  Starting with "**While Loops**" to the end of the chapter.
-
----
-
 # Fork & Clone
 
 Fork and clone [this repository](https://github.com/JoinCODED/cashier) in your `python` directory.
