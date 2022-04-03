@@ -6,7 +6,7 @@ Fork and clone [this repository](https://github.com/JoinCODED/cashier) in your `
 
 ## Task
 
-In this task you'll be building a system to assist a cashier where the cashier has to enter the items bought and at the end a receipt will be printed.
+In this task, you'll be building a system to assist a cashier where the cashier has to enter the items bought and at the end, a receipt will be printed.
 
 ```code
 Item (enter "done" when finished): apples
@@ -47,8 +47,8 @@ Total Price: 4.000KD
         ]
         ```
 
-    3. Add each formatted line item to your `invoice_items` list.
-    4. Return your `invoice_items` after looping through all the items.
+    3. Add each formatted item to your `invoice_items` list.
+    4. Return your `invoice_items` list after looping through all the items.
 2. In the `get_total` function:
     1. Initialize the `total` to be `0`.
     2. Loop through all the items, calculate the subtotal (`quantity * price`) for each item and add that to your total.
@@ -59,8 +59,8 @@ Total Price: 4.000KD
     3. Print out the total price at the end.
 4. In the main function:
     1. Create a list called `items`, you will be adding the items received from the user to this `list`.
-    2. Ask the user for an item name, and inform to input `done` if they are done.
-    3. Add a `while` loop that checks the users input. The loop ends if the user types `"done"` for the item name.
+    2. Ask the user to input an item name, and inform him to input `done` once he finishes. Assign the input to a variable called item_name.
+    3. Add a `while` loop that checks the user's input. The loop ends if the user types `"done"` for the item name. Otherwise, the user will be asked for two more inputs: price and quantity.
     4. Save the user's input (the item's name, price, quantity) in a dictionary. Append this dictionary to a `list` of `items` in Step 1. This list of items is a list of dictionaries, where each dictionary represents an item.
         - In the example above, the list of items looks like this:
 
@@ -90,5 +90,5 @@ Total Price: 4.000KD
             ```
 
     5. Get the `invoice items` and `total` using the functions you have added above.
-    6. Use `print_receipt` to show the user's receipt.
+    6. Use the `print_receipt` function and pass `invoice items` and `total` to it, to show the user's receipt.
 5. Push your code.
